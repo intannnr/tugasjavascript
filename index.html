@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Luas Bangun Datar</title>
+    <script>
+        // Fungsi untuk menghitung luas persegi panjang
+        function luasPersegiPanjang() {
+            let panjang = parseFloat(document.getElementById("panjang").value);
+            let lebar = parseFloat(document.getElementById("lebar").value);
+            let hasil = panjang * lebar;
+            document.getElementById("hasilPersegiPanjang").innerHTML = "Luas: " + hasil + " cm²";
+        }
+
+        // Fungsi untuk menghitung luas bujur sangkar
+        function luasBujurSangkar() {
+            let sisi = parseFloat(document.getElementById("sisi").value);
+            let hasil = sisi * sisi;
+            document.getElementById("hasilBujurSangkar").innerHTML = "Luas: " + hasil + " cm²";
+        }
+
+        // Fungsi untuk menghitung luas segitiga
+        function luasSegitiga() {
+            let alas = parseFloat(document.getElementById("alas").value);
+            let tinggi = parseFloat(document.getElementById("tinggi").value);
+            let hasil = (alas * tinggi) / 2;
+            document.getElementById("hasilSegitiga").innerHTML = "Luas: " + hasil + " cm²";
+        }
+    </script>
+</head>
+<body>
+    <h2>Kalkulator Luas Bangun Datar</h2>
+
+    <!-- Form untuk Persegi Panjang -->
+    <h3>Luas Persegi Panjang</h3>
+    <label>Panjang (cm):</label>
+    <input type="number" id="panjang"><br><br>
+    <label>Lebar (cm):</label>
+    <input type="number" id="lebar"><br><br>
+    <button onclick="luasPersegiPanjang()">Hitung Luas</button>
+    <p id="hasilPersegiPanjang"></p>
+
+    <hr>
+
+    <!-- Form untuk Bujur Sangkar -->
+    <h3>Luas Bujur Sangkar</h3>
+    <label>Sisi (cm):</label>
+    <input type="number" id="sisi"><br><br>
+    <button onclick="luasBujurSangkar()">Hitung Luas</button>
+    <p id="hasilBujurSangkar"></p>
+
+    <hr>
+
+    <!-- Form untuk Segitiga -->
+    <h3>Luas Segitiga</h3>
+    <label>Alas (cm):</label>
+    <input type="number" id="alas"><br><br>
+    <label>Tinggi (cm):</label>
+    <input type="number" id="tinggi"><br><br>
+    <button onclick="luasSegitiga()">Hitung Luas</button>
+    <p id="hasilSegitiga"></p>
+
+</body>
+</html>
